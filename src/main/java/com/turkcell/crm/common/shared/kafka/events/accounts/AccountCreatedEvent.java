@@ -7,8 +7,6 @@ public class AccountCreatedEvent {
     private String number;
     private String type;
     private int accountTypeId;
-    private int addressId;
-    private int accountAddressId;
 
     public int getId() {
         return id;
@@ -56,21 +54,5 @@ public class AccountCreatedEvent {
 
     public void setAccountTypeId(int accountTypeId) {
         this.accountTypeId = accountTypeId;
-    }
-
-    public int getAddressId() {
-        return addressId;
-    }
-
-    public void setAddressId(int addressId) {
-        this.addressId = addressId;
-    }
-
-    public int getAccountAddressId() {
-        return accountAddressId;
-    }
-
-    public void setAccountAddressId(int accountAddressId) {
-        this.accountAddressId = accountAddressId;
     }
 }
