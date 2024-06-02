@@ -1,5 +1,6 @@
 package com.turkcell.crm.common.shared.exceptions.handlers;
 
+import com.turkcell.crm.common.shared.exceptions.constants.Messages;
 import com.turkcell.crm.common.shared.exceptions.problem_details.*;
 import com.turkcell.crm.common.shared.exceptions.types.*;
 import org.slf4j.Logger;
@@ -72,7 +73,7 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     public AuthenticationProblemDetails handleBadCredentialsException() {
         AuthenticationProblemDetails authenticationProblemDetails = new AuthenticationProblemDetails();
-        authenticationProblemDetails.setDetail("Invalid username or password.");
+        authenticationProblemDetails.setDetail(Messages.ExceptionMessages.INVALID_USER_OR_PASSWORD);
         return authenticationProblemDetails;
     }
 
